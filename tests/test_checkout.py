@@ -1,7 +1,7 @@
-from page.login_page import LoginPage
-from page.catalog_page import CatalogPage
-from page.shopping_cart_page import ShoppingCartPage
-from page.checkout_page import CheckoutPage
+from pages.login_page import LoginPage
+from pages.catalog_page import CatalogPage
+from pages.shopping_cart_page import ShoppingCartPage
+from pages.checkout_page import CheckoutPage
 
 def test_checkout(driver):
     login = LoginPage(driver)

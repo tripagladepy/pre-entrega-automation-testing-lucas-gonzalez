@@ -1,7 +1,7 @@
 from selenium.webdriver.common.by import By
-from page.main_page import MainPage
+from pages.base_page import BasePage
 
-class ProductPage(MainPage):   #Si necesitas un producto especifico.
+class ProductPage(BasePage):
 
     BTN_ADD = (By.CLASS_NAME, "btn_inventory")
 

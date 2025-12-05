@@ -1,7 +1,7 @@
 from selenium.webdriver.common.by import By
-from page.main_page import MainPage
+from pages.base_page import BasePage
 
-class CheckoutPage(MainPage):
+class CheckoutPage(BasePage):
 
     FIRST = (By.ID, "first-name")
     LAST = (By.ID, "last-name")

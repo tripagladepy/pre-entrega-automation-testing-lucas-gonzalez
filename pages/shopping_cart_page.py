@@ -1,7 +1,7 @@
 from selenium.webdriver.common.by import By
-from page.main_page import MainPage
+from pages.base_page import BasePage
 
-class ShoppingCartPage(MainPage):
+class ShoppingCartPage(BasePage):
 
     ITEMS = (By.CLASS_NAME, "cart_item")
     CHECKOUT_BTN = (By.ID, "checkout")

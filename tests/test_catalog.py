@@ -1,5 +1,5 @@
-from page.login_page import LoginPage
-from page.catalog_page import CatalogPage
+from pages.login_page import LoginPage
+from pages.catalog_page import CatalogPage
 
 def test_catalogo_muestra_items(driver):
     login = LoginPage(driver)

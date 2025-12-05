@@ -1,7 +1,7 @@
 from selenium.webdriver.common.by import By
-from page.main_page import MainPage
+from pages.base_page import BasePage
 
-class LoginPage(MainPage):
+class LoginPage(BasePage):
 
     USER = (By.ID, "user-name")
     PASS = (By.ID, "password")

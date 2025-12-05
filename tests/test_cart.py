@@ -1,6 +1,6 @@
-from page.login_page import LoginPage
-from page.catalog_page import CatalogPage
-from page.shopping_cart_page import ShoppingCartPage
+from pages.login_page import LoginPage
+from pages.catalog_page import CatalogPage
+from pages.shopping_cart_page import ShoppingCartPage
 
 def test_carrito(driver):
     login = LoginPage(driver)
