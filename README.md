@@ -20,7 +20,7 @@ Instalación de dependencias
 
     - Se deberá ejecutar el siguiente comando:
 
-        `pip install -r requirements.txt`
+        pip install -r requirements.txt
 
 
 Ejecución de las pruebas
@@ -31,4 +31,6 @@ Ejecución de las pruebas
 
     - Para ejecutar todos los casos de prueba con reporte html:
 
-        pytest -v --html=reporte.html
+        pytest -v --html=reporte.
+        
+        
