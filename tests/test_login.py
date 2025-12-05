@@ -1,18 +1,21 @@
+import pytest
 from pages.login_page import LoginPage
-from pages.catalog_page import CatalogPage
+from utils.data_reader import load_credentials
 
-def test_login_valido(driver):
+@pytest.mark.parametrize("cred", load_credentials())
+def test_login_param(driver, cred):   
+    
+    #Test parametrizado de login: usa datos desde data/credentials.json
+    #cred: diccionario con keys username, password, valid
+    
     login = LoginPage(driver)
     login.abrir()
-    login.login("standard_user", "secret_sauce")
+    login.login(cred["username"], cred["password"])
 
-    catalog = CatalogPage(driver)
-    assert catalog.obtener_cantidad_items() > 0
-
-
-def test_login_invalido(driver):
-    login = LoginPage(driver)
-    login.abrir()
-    login.login("fake_user", "wrong_pass")
-
-    assert "Username and password do not match" in login.obtener_error()
+    if cred.get("valid"):
+        # en saucedemo un login valido redirige al inventario (url contiene "inventory")
+        assert "inventory" in driver.current_url, f"Se esperaba redireccion a inventory para {cred['username']}"
+    else:
+        # comprobación de mensaje de error (puede variar dependiendo de la pagina)
+        error = login.obtener_error()
+        assert error and len(error) > 0, f"Se esperaba mensaje de error para {cred['username']}"
