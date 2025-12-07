@@ -1,0 +1,97 @@
+2025-12-07 11:08:26,931 - INFO - ====== WebDriver manager ======
+2025-12-07 11:08:28,245 - INFO - Get LATEST chromedriver version for google-chrome
+2025-12-07 11:08:28,854 - INFO - Get LATEST chromedriver version for google-chrome
+2025-12-07 11:08:29,541 - INFO - Driver [C:\Users\lucas\.wdm\drivers\chromedriver\win64\142.0.7444.175\chromedriver-win32/chromedriver.exe] found in cache
+2025-12-07 11:08:31,339 - INFO - Abrir URL: https://www.saucedemo.com/
+2025-12-07 11:08:31,640 - INFO - Escribir 'standard_user' en: ('id', 'user-name')
+2025-12-07 11:08:31,640 - INFO - Encontrar elemento: ('id', 'user-name')
+2025-12-07 11:08:31,748 - INFO - Escribir 'secret_sauce' en: ('id', 'password')
+2025-12-07 11:08:31,748 - INFO - Encontrar elemento: ('id', 'password')
+2025-12-07 11:08:31,822 - INFO - Click en: ('id', 'login-button')
+2025-12-07 11:08:32,083 - INFO - Click en: ('id', 'shopping_cart_container')
+2025-12-07 11:08:34,283 - INFO - ====== WebDriver manager ======
+2025-12-07 11:08:35,114 - INFO - Get LATEST chromedriver version for google-chrome
+2025-12-07 11:08:35,592 - INFO - Get LATEST chromedriver version for google-chrome
+2025-12-07 11:08:36,055 - INFO - Driver [C:\Users\lucas\.wdm\drivers\chromedriver\win64\142.0.7444.175\chromedriver-win32/chromedriver.exe] found in cache
+2025-12-07 11:08:37,137 - INFO - Abrir URL: https://www.saucedemo.com/
+2025-12-07 11:08:37,447 - INFO - Escribir 'standard_user' en: ('id', 'user-name')
+2025-12-07 11:08:37,447 - INFO - Encontrar elemento: ('id', 'user-name')
+2025-12-07 11:08:37,577 - INFO - Escribir 'secret_sauce' en: ('id', 'password')
+2025-12-07 11:08:37,577 - INFO - Encontrar elemento: ('id', 'password')
+2025-12-07 11:08:37,654 - INFO - Click en: ('id', 'login-button')
+2025-12-07 11:08:37,855 - INFO - Click en: ('id', 'shopping_cart_container')
+2025-12-07 11:08:40,034 - INFO - ====== WebDriver manager ======
+2025-12-07 11:08:40,830 - INFO - Get LATEST chromedriver version for google-chrome
+2025-12-07 11:08:41,375 - INFO - Get LATEST chromedriver version for google-chrome
+2025-12-07 11:08:41,985 - INFO - Driver [C:\Users\lucas\.wdm\drivers\chromedriver\win64\142.0.7444.175\chromedriver-win32/chromedriver.exe] found in cache
+2025-12-07 11:08:43,070 - INFO - Abrir URL: https://www.saucedemo.com/
+2025-12-07 11:08:43,392 - INFO - Escribir 'standard_user' en: ('id', 'user-name')
+2025-12-07 11:08:43,392 - INFO - Encontrar elemento: ('id', 'user-name')
+2025-12-07 11:08:43,504 - INFO - Escribir 'secret_sauce' en: ('id', 'password')
+2025-12-07 11:08:43,504 - INFO - Encontrar elemento: ('id', 'password')
+2025-12-07 11:08:43,571 - INFO - Click en: ('id', 'login-button')
+2025-12-07 11:08:43,858 - INFO - Click en: ('id', 'shopping_cart_container')
+2025-12-07 11:08:46,035 - INFO - ====== WebDriver manager ======
+2025-12-07 11:08:46,919 - INFO - Get LATEST chromedriver version for google-chrome
+2025-12-07 11:08:47,417 - INFO - Get LATEST chromedriver version for google-chrome
+2025-12-07 11:08:47,900 - INFO - Driver [C:\Users\lucas\.wdm\drivers\chromedriver\win64\142.0.7444.175\chromedriver-win32/chromedriver.exe] found in cache
+2025-12-07 11:08:49,035 - INFO - Abrir URL: https://www.saucedemo.com/
+2025-12-07 11:08:49,369 - INFO - Escribir 'standard_user' en: ('id', 'user-name')
+2025-12-07 11:08:49,369 - INFO - Encontrar elemento: ('id', 'user-name')
+2025-12-07 11:08:49,475 - INFO - Escribir 'secret_sauce' en: ('id', 'password')
+2025-12-07 11:08:49,475 - INFO - Encontrar elemento: ('id', 'password')
+2025-12-07 11:08:49,549 - INFO - Click en: ('id', 'login-button')
+2025-12-07 11:08:51,783 - INFO - ====== WebDriver manager ======
+2025-12-07 11:08:52,626 - INFO - Get LATEST chromedriver version for google-chrome
+2025-12-07 11:08:53,118 - INFO - Get LATEST chromedriver version for google-chrome
+2025-12-07 11:08:53,610 - INFO - Driver [C:\Users\lucas\.wdm\drivers\chromedriver\win64\142.0.7444.175\chromedriver-win32/chromedriver.exe] found in cache
+2025-12-07 11:08:54,732 - INFO - Abrir URL: https://www.saucedemo.com/
+2025-12-07 11:08:55,038 - INFO - Escribir 'standard_user' en: ('id', 'user-name')
+2025-12-07 11:08:55,038 - INFO - Encontrar elemento: ('id', 'user-name')
+2025-12-07 11:08:55,137 - INFO - Escribir 'secret_sauce' en: ('id', 'password')
+2025-12-07 11:08:55,137 - INFO - Encontrar elemento: ('id', 'password')
+2025-12-07 11:08:55,201 - INFO - Click en: ('id', 'login-button')
+2025-12-07 11:08:55,390 - INFO - Click en: ('id', 'shopping_cart_container')
+2025-12-07 11:08:55,459 - INFO - Click en: ('id', 'checkout')
+2025-12-07 11:08:55,524 - INFO - Escribir 'Lucas' en: ('id', 'first-name')
+2025-12-07 11:08:55,524 - INFO - Encontrar elemento: ('id', 'first-name')
+2025-12-07 11:08:55,586 - INFO - Escribir 'Gonzalez' en: ('id', 'last-name')
+2025-12-07 11:08:55,586 - INFO - Encontrar elemento: ('id', 'last-name')
+2025-12-07 11:08:55,646 - INFO - Escribir '1674' en: ('id', 'postal-code')
+2025-12-07 11:08:55,646 - INFO - Encontrar elemento: ('id', 'postal-code')
+2025-12-07 11:08:55,702 - INFO - Click en: ('id', 'continue')
+2025-12-07 11:08:55,774 - INFO - Click en: ('id', 'finish')
+2025-12-07 11:08:57,958 - INFO - ====== WebDriver manager ======
+2025-12-07 11:08:58,765 - INFO - Get LATEST chromedriver version for google-chrome
+2025-12-07 11:08:59,253 - INFO - Get LATEST chromedriver version for google-chrome
+2025-12-07 11:08:59,731 - INFO - Driver [C:\Users\lucas\.wdm\drivers\chromedriver\win64\142.0.7444.175\chromedriver-win32/chromedriver.exe] found in cache
+2025-12-07 11:09:00,839 - INFO - Abrir URL: https://www.saucedemo.com/
+2025-12-07 11:09:01,159 - INFO - Escribir 'standard_user' en: ('id', 'user-name')
+2025-12-07 11:09:01,159 - INFO - Encontrar elemento: ('id', 'user-name')
+2025-12-07 11:09:01,264 - INFO - Escribir 'secret_sauce' en: ('id', 'password')
+2025-12-07 11:09:01,264 - INFO - Encontrar elemento: ('id', 'password')
+2025-12-07 11:09:01,343 - INFO - Click en: ('id', 'login-button')
+2025-12-07 11:09:03,624 - INFO - ====== WebDriver manager ======
+2025-12-07 11:09:04,536 - INFO - Get LATEST chromedriver version for google-chrome
+2025-12-07 11:09:05,071 - INFO - Get LATEST chromedriver version for google-chrome
+2025-12-07 11:09:05,651 - INFO - Driver [C:\Users\lucas\.wdm\drivers\chromedriver\win64\142.0.7444.175\chromedriver-win32/chromedriver.exe] found in cache
+2025-12-07 11:09:06,830 - INFO - Abrir URL: https://www.saucedemo.com/
+2025-12-07 11:09:06,875 - INFO - Escribir 'locked_out_user' en: ('id', 'user-name')
+2025-12-07 11:09:06,876 - INFO - Encontrar elemento: ('id', 'user-name')
+2025-12-07 11:09:07,263 - INFO - Escribir 'secret_sauce' en: ('id', 'password')
+2025-12-07 11:09:07,263 - INFO - Encontrar elemento: ('id', 'password')
+2025-12-07 11:09:07,328 - INFO - Click en: ('id', 'login-button')
+2025-12-07 11:09:07,406 - INFO - Obtener texto de: ('css selector', "h3[data-test='error']")
+2025-12-07 11:09:07,406 - INFO - Encontrar elemento: ('css selector', "h3[data-test='error']")
+2025-12-07 11:09:09,527 - INFO - ====== WebDriver manager ======
+2025-12-07 11:09:10,393 - INFO - Get LATEST chromedriver version for google-chrome
+2025-12-07 11:09:10,902 - INFO - Get LATEST chromedriver version for google-chrome
+2025-12-07 11:09:11,404 - INFO - Driver [C:\Users\lucas\.wdm\drivers\chromedriver\win64\142.0.7444.175\chromedriver-win32/chromedriver.exe] found in cache
+2025-12-07 11:09:12,516 - INFO - Abrir URL: https://www.saucedemo.com/
+2025-12-07 11:09:12,825 - INFO - Escribir 'invalid_user' en: ('id', 'user-name')
+2025-12-07 11:09:12,826 - INFO - Encontrar elemento: ('id', 'user-name')
+2025-12-07 11:09:12,945 - INFO - Escribir 'wrong_pass' en: ('id', 'password')
+2025-12-07 11:09:12,946 - INFO - Encontrar elemento: ('id', 'password')
+2025-12-07 11:09:13,020 - INFO - Click en: ('id', 'login-button')
+2025-12-07 11:09:13,114 - INFO - Obtener texto de: ('css selector', "h3[data-test='error']")
+2025-12-07 11:09:13,114 - INFO - Encontrar elemento: ('css selector', "h3[data-test='error']")

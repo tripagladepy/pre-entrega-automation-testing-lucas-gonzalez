@@ -1,5 +1,81 @@
+# name: Run Automated Tests
+
+# on:
+#   push:
+#     branches: [ "main" ]
+#   pull_request:
+#     branches: [ "main" ]
+
+# jobs:
+#   test:
+#     runs-on: ubuntu-latest
+
+#     steps:
+
+#     # 1. Obtener el código
+#     - name: Checkout repository
+#       uses: actions/checkout@v3
+
+#     # 2. Instalar Python
+#     - name: Set up Python
+#       uses: actions/setup-python@v4
+#       with:
+#         python-version: "3.10"
+
+#     # 3. Instalar dependencias
+#     - name: Install dependencies
+#       run: |
+#         pip install -r requirements.txt
+
+#     # 4. Instalar Chrome + ChromeDriver
+#     - name: Install Chrome & ChromeDriver
+#       uses: browser-actions/setup-chrome@v1
+
+#     # fix PATH for Chrome
+#     - name: Add Chrome to PATH
+#       run: echo "/usr/bin/google-chrome-stable" >> $GITHUB_PATH
+
+#     # 5. Crear carpetas necesarias
+#     - name: Create reports, screenshots & logs folders
+#       run: |
+#         mkdir -p reports
+#         mkdir -p screenshots
+#         mkdir -p logs
+
+#     # 6. Forzar modo HEADLESS
+#     - name: Set headless mode
+#       run: echo "HEADLESS=true" >> $GITHUB_ENV
+
+#     # 7. Ejecutar Pytest
+#     - name: Run pytest
+#       run: |
+#         pytest --html=reports/report.html --self-contained-html
+
+#     # 8. Reporte HTML
+#     - name: Upload report
+#       uses: actions/upload-artifact@v4
+#       with:
+#         name: test-report
+#         path: reports/report.html
+
+#     # 9. Screenshots
+#     - name: Upload screenshots
+#       uses: actions/upload-artifact@v4
+#       with:
+#         name: screenshots
+#         path: screenshots/
+
+#     # 10. Logs
+#     - name: Upload logs
+#       uses: actions/upload-artifact@v4
+#       with:
+#         name: logs
+#         path: logs/
+
+
 name: Run Automated Tests
 
+# Se ejecuta cuando haces push o pull request a main
 on:
   push:
     branches: [ "main" ]
@@ -12,7 +88,7 @@ jobs:
 
     steps:
 
-    # 1. Obtener el código
+    # 1. Obtener el código del repositorio
     - name: Checkout repository
       uses: actions/checkout@v3
 
@@ -22,46 +98,50 @@ jobs:
       with:
         python-version: "3.10"
 
-    # 3. Instalar dependencias
+    # 3. Instalar dependencias del proyecto
     - name: Install dependencies
       run: |
         pip install -r requirements.txt
 
-    # 4. Instalar Chrome + ChromeDriver
+    # 4. Instalar Google Chrome + ChromeDriver
     - name: Install Chrome & ChromeDriver
       uses: browser-actions/setup-chrome@v1
 
-    # 5. Crear carpetas necesarias
+    # 4.1 Fix PATH para Chrome (asegura que Selenium lo encuentre)
+    - name: Add Chrome to PATH
+      run: echo "/usr/bin/google-chrome-stable" >> $GITHUB_PATH
+
+    # 5. Crear carpetas necesarias para los resultados
     - name: Create reports, screenshots & logs folders
       run: |
         mkdir -p reports
         mkdir -p screenshots
         mkdir -p logs
 
-    # 6. Forzar modo HEADLESS
+    # 6. Forzar modo HEADLESS para Selenium
     - name: Set headless mode
       run: echo "HEADLESS=true" >> $GITHUB_ENV
 
-    # 7. Ejecutar Pytest
+    # 7. Ejecutar Pytest con generación de reporte HTML
     - name: Run pytest
       run: |
         pytest --html=reports/report.html --self-contained-html
 
-    # 8. Reporte HTML
+    # 8. Subir reporte HTML como artefacto
     - name: Upload report
       uses: actions/upload-artifact@v4
       with:
         name: test-report
         path: reports/report.html
 
-    # 9. Screenshots
+    # 9. Subir screenshots de fallos
     - name: Upload screenshots
       uses: actions/upload-artifact@v4
       with:
         name: screenshots
         path: screenshots/
 
-    # 10. Logs
+    # 10. Subir logs de ejecución
     - name: Upload logs
       uses: actions/upload-artifact@v4
       with:
