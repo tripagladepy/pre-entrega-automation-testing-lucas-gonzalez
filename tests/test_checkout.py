@@ -30,7 +30,7 @@ def test_checkout(driver):
     cart.ir_a_checkout()   # Ir a checkout
 
     checkout = CheckoutPage(driver)   # Completar datos
-    checkout.completar_datos("Lucas", "Gonzalez", "1234")
+    checkout.completar_datos("Lucas", "Gonzalez", "1674")
 
     checkout.finalizar_compra()   # Finalizar compra
 

@@ -32,8 +32,8 @@ def pytest_runtest_makereport(item, call):   #Guarda screenshot si un test falla
     screenshots_dir = "reports/screenshots"   # carpeta donde guardar imágenes
     os.makedirs(screenshots_dir, exist_ok=True)
 
-    timestamp = datetime.now().strftime("%Y%m%d_%H%M%S")   # nombre del archivo
-    file_name = f"{item.name}_{timestamp}.png"
+    timestamp = datetime.now().strftime("%Y%m%d_%H%M%S")   
+    file_name = f"{item.name}_{timestamp}.png"   # nombre del archivo
     file_path = os.path.join(screenshots_dir, file_name)
 
     driver.save_screenshot(file_path)   # guarda screenshot
