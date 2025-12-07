@@ -33,8 +33,3 @@ def test_checkout(driver):
     checkout.completar_datos("Lucas", "Gonzalez", "1674")
 
     checkout.finalizar_compra()   # Finalizar compra
-
-    # Verificar página de confirmación
-    # *Ajustá el locator si tu CheckoutPage usa otro nombre*
-    #confirm_text = driver.find_element(By.CLASS_NAME, "complete-header").text
-    #assert "THANK YOU" in confirm_text.upper()
