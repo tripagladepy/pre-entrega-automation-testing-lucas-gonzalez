@@ -6,28 +6,28 @@ from pages.base_page import BasePage
 
 class CheckoutPage(BasePage):
 
-    FIRST = (By.ID, "first-name")
-    LAST = (By.ID, "last-name")
-    ZIP = (By.ID, "postal-code")
-    CONTINUE = (By.ID, "continue")
-    FINISH = (By.ID, "finish")
-    SUCCESS_MSG = (By.CLASS_NAME, "complete-header")
+    FIRST_NAME = (By.ID, "first-name")
+    LAST_NAME = (By.ID, "last-name")
+    POSTAL_CODE = (By.ID, "postal-code")
+    CONTINUE_BUTTON = (By.ID, "continue")
+    FINISH_BUTTON = (By.ID, "finish")
 
-    def completar_datos(self, nombre, apellido, zip):
+    def completar_datos(self, nombre, apellido, codigo_postal):
+        wait = WebDriverWait(self.driver, 20)
 
-        # Espera explicita para mandar timeout en github actions
-        WebDriverWait(self.driver, 15).until(
-            EC.visibility_of_element_located(self.FIRST)
-        )
+        # Espera sólida tanto para LOCAL como para CI
+        wait.until(EC.url_contains("checkout-step-one"))
 
-        self.escribir(self.FIRST, nombre)
-        self.escribir(self.LAST, apellido)
-        self.escribir(self.ZIP, zip)
-        self.click(self.CONTINUE)
+        wait.until(EC.visibility_of_element_located(self.FIRST_NAME)).send_keys(nombre)
+        wait.until(EC.visibility_of_element_located(self.LAST_NAME)).send_keys(apellido)
+        wait.until(EC.visibility_of_element_located(self.POSTAL_CODE)).send_keys(codigo_postal)
+
+        wait.until(EC.element_to_be_clickable(self.CONTINUE_BUTTON)).click()
 
     def finalizar_compra(self):
-        self.click(self.FINISH)
+        wait = WebDriverWait(self.driver, 20)
 
-    def obtener_mensaje_final(self):
-        """Retorna el texto final luego de finalizar la compra."""
-        return self.obtener_texto(self.SUCCESS_MSG)
+        # Espera a la pantalla final del checkout
+        wait.until(EC.url_contains("checkout-step-two"))
+
+        wait.until(EC.element_to_be_clickable(self.FINISH_BUTTON)).click()

@@ -1,26 +1,40 @@
 from selenium.webdriver.common.by import By
+from selenium.webdriver.support.ui import WebDriverWait
+from selenium.webdriver.support import expected_conditions as EC
 from pages.base_page import BasePage
 
+
 class CatalogPage(BasePage):
+
     INVENTORY_ITEMS = (By.CLASS_NAME, "inventory_item")
     CART_BUTTON = (By.ID, "shopping_cart_container")
-    TITLE = (By.CLASS_NAME, "title")
-
-    def page_title(self):
-        return self.obtener_texto(self.TITLE)
 
     def obtener_cantidad_items(self):
-        return len(self.driver.find_elements(*self.INVENTORY_ITEMS))
-
-    def abrir_carrito(self):
-        self.click(self.CART_BUTTON)
+        WebDriverWait(self.driver, 15).until(
+            EC.presence_of_element_located(self.INVENTORY_ITEMS)
+        )
+        items = self.driver.find_elements(*self.INVENTORY_ITEMS)
+        return len(items)
 
     def add_product_by_name(self, product_name):
-        items = self.driver.find_elements(By.CLASS_NAME, "inventory_item")
+        WebDriverWait(self.driver, 15).until(
+            EC.presence_of_element_located(self.INVENTORY_ITEMS)
+        )
+
+        items = self.driver.find_elements(*self.INVENTORY_ITEMS)
+
         for item in items:
-            title = item.find_element(By.CLASS_NAME, "inventory_item_name").text
-            if title.strip() == product_name.strip():
-                btn = item.find_element(By.CSS_SELECTOR, "button.btn_inventory")
-                btn.click()
+            name = item.find_element(By.CLASS_NAME, "inventory_item_name").text
+            if name.strip() == product_name.strip():
+                boton = item.find_element(By.TAG_NAME, "button")
+                self.driver.execute_script("arguments[0].scrollIntoView(true);", boton)
+                boton.click()
                 return True
+
         return False
+
+    def abrir_carrito(self):
+        WebDriverWait(self.driver, 10).until(
+            EC.element_to_be_clickable(self.CART_BUTTON)
+        )
+        self.click(self.CART_BUTTON)
